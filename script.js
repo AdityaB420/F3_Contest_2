@@ -100,8 +100,7 @@ const address = inputBox;
 fetch(`https://api.geoapify.com/v1/geocode/search?text=${encodeURIComponent(address)}&apiKey=${API_KEY}`)
 .then(resp => resp.json())
 .then((geocodingResult) => {
-console.log(geocodingResult,'sfdf');
-console.log(geocodingResult);
+console.log(geocodingResult,'result obtained');
 SearchUserDiv.innerHTML+="";
 if(geocodingResult.features.length==0){
 error("Data not found !")
